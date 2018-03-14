@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="ipad12_9" orientation="landscape">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue-Bold</string>
+        <array key="ChalkboardSE.ttc">
+            <string>ChalkboardSE-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -23,45 +24,63 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Generate a Silly Song" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quf-YJ-4GT">
-                                <rect key="frame" x="591" y="228.5" width="184" height="21.5"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="65" y="168" width="284" height="41"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="29"/>
+                                <color key="textColor" red="0.1294129490852356" green="0.12940967082977295" blue="0.12941190600395203" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HlF-eD-a97">
-                                <rect key="frame" x="619.5" y="282" width="127" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HlF-eD-a97">
+                                <rect key="frame" x="113" y="244" width="188" height="25"/>
+                                <color key="backgroundColor" red="0.98039871454238892" green="0.9803803563117981" blue="0.98039287328720093" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="pcZ-D6-wc6"/>
+                                </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="displayLyrics:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="SHU-mu-nh4"/>
                                     <action selector="reset:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="s5J-mZ-mFO"/>
                                 </connections>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ljx-Z9-5G0">
-                                <rect key="frame" x="563" y="448" width="240" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ljx-Z9-5G0">
+                                <rect key="frame" x="87" y="304" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="J9C-Ys-Xn2"/>
                                     <constraint firstAttribute="width" constant="240" id="lYR-mG-P3H"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="vNt-HR-0ot"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.11372653394937515" green="0.11372355371713638" blue="0.11372559517621994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.98686856031417847" green="0.92547863721847534" blue="0.37505900859832764" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="ljx-Z9-5G0" firstAttribute="top" secondItem="HlF-eD-a97" secondAttribute="bottom" constant="35" id="4z0-bb-QPb"/>
+                            <constraint firstItem="HlF-eD-a97" firstAttribute="top" secondItem="quf-YJ-4GT" secondAttribute="bottom" constant="35" id="5mg-Hi-3ZI"/>
                             <constraint firstItem="ljx-Z9-5G0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AQR-lc-Dbd"/>
                             <constraint firstItem="ljx-Z9-5G0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PAs-h9-LuP"/>
-                            <constraint firstItem="HlF-eD-a97" firstAttribute="top" secondItem="quf-YJ-4GT" secondAttribute="bottom" constant="32" id="g8Q-uI-zg4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HlF-eD-a97" secondAttribute="trailing" constant="93" id="XmG-pv-OJX"/>
                             <constraint firstItem="quf-YJ-4GT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="krY-to-E1s"/>
-                            <constraint firstItem="HlF-eD-a97" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rxn-l2-Fjt"/>
-                            <constraint firstItem="ljx-Z9-5G0" firstAttribute="top" secondItem="HlF-eD-a97" secondAttribute="bottom" constant="136" id="yQh-Xy-lEe"/>
+                            <constraint firstItem="HlF-eD-a97" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xuU-Jf-9Q2"/>
                         </constraints>
                     </view>
                     <connections>
