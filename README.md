@@ -18,6 +18,7 @@ Silly Song allows the user to
 - Udacity
 - Model View Controller
 - UIKit
+- Xcode
 
  ## License
 This project is licensed under the MIT License
